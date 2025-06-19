@@ -21,19 +21,18 @@ public class Main1 {
         System.out.print("Enter product name to search: ");
         String name1 = sc.nextLine();
         Product2 result1 = linearSearchByName(products, name1);
-        System.out.println(result1 != null ? "✅ Found: " + result1 : "❌ Not found");
+        System.out.println(result1 != null ? "Found: " + result1 : "Not found");
 
         System.out.println("\n=== Binary Search ===");
-        sortByName(products); // Sort array first
+        sortByName(products); 
         System.out.print("Enter product name to search: ");
         String name2 = sc.nextLine();
         Product2 result2 = binarySearchByName(products, name2);
-        System.out.println(result2 != null ? "✅ Found: " + result2 : "❌ Not found");
+        System.out.println(result2 != null ? "Found: " + result2 : "Not found");
 
         sc.close();
     }
 
-    // ✅ Linear Search using Product2
     public static Product2 linearSearchByName(Product2[] products, String name) {
         for (Product2 p : products) {
             if (p.productName.equalsIgnoreCase(name)) {
@@ -43,12 +42,12 @@ public class Main1 {
         return null;
     }
 
-    // ✅ Sort products by name using Product2
+
     public static void sortByName(Product2[] products) {
         Arrays.sort(products, Comparator.comparing(p -> p.productName.toLowerCase()));
     }
 
-    // ✅ Binary Search using Product2
+
     public static Product2 binarySearchByName(Product2[] products, String name) {
         int left = 0, right = products.length - 1;
         name = name.toLowerCase();
