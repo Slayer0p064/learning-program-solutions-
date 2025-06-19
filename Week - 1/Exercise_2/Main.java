@@ -41,14 +41,14 @@ public class Main {
                     String type = sc.nextLine();
 
                     products.add(new Product(id, name, quantity, price, type));
-                    System.out.println("✅ Product added successfully.");
+                    System.out.println("Product added successfully.");
                     break;
 
                 case 2:
                     System.out.print("Enter product name to search (Linear): ");
                     String name1 = sc.nextLine();
                     Product result1 = linearSearchByName(products, name1);
-                    System.out.println(result1 != null ? "🔍 Found: " + result1 : "❌ Not found");
+                    System.out.println(result1 != null ? "Found: " + result1 : "Not found");
                     break;
 
                 case 3:
@@ -56,13 +56,13 @@ public class Main {
                     String name2 = sc.nextLine();
                     sortByName(products); // Sort before binary search
                     Product result2 = binarySearchByName(products, name2);
-                    System.out.println(result2 != null ? "🔍 Found: " + result2 : "❌ Not found");
+                    System.out.println(result2 != null ? "Found: " + result2 : " Not found");
                     break;
 
                 case 4:
-                    System.out.println("\n📦 All Products:");
+                    System.out.println("\n All Products:");
                     if (products.isEmpty()) {
-                        System.out.println("🚫 No products added yet.");
+                        System.out.println(" No products added yet.");
                     } else {
                         for (Product p : products) {
                             System.out.println(p);
@@ -71,11 +71,11 @@ public class Main {
                     break;
 
                 case 5:
-                    System.out.println("👋 Exiting...");
+                    System.out.println(" Exiting...");
                     break;
 
                 default:
-                    System.out.println("⚠️ Invalid choice. Try again.");
+                    System.out.println(" Invalid choice. Try again.");
             }
 
         } while (choice != 5);
