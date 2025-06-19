@@ -13,6 +13,6 @@ public class Order {
 
     @Override
     public String toString() {
-        return "[" + orderId + "] " + customerName + " | ₹" + totalPrice;
+        return "[" + orderId + "] " + customerName + " | " + totalPrice;
     }
 }
