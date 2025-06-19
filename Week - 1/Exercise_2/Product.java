@@ -17,6 +17,6 @@ public class Product {
 
     @Override
     public String toString() {
-        return "[" + productId + "] " + productName + " | Qty: " + quantity + " | ₹" + price + " | Type: " + type;
+        return "[" + productId + "] " + productName + " | Qty: " + quantity + " | " + price + " | Type: " + type;
     }
 }
