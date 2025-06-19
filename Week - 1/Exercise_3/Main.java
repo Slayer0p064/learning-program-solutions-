@@ -6,11 +6,11 @@ public class Main {
 
     public static void main(String[] args) {
         List<Order> orders = new ArrayList<>(Arrays.asList(
-            new Order(1, "Alice", 2500.0),
-            new Order(2, "Bob", 1800.5),
-            new Order(3, "Charlie", 3200.0),
-            new Order(4, "David", 1500.0),
-            new Order(5, "Eva", 4100.0)
+            new Order(1, "C1", 2500.0),
+            new Order(2, "C2", 1800.5),
+            new Order(3, "C3", 3200.0),
+            new Order(4, "C4", 1500.0),
+            new Order(5, "C5", 4100.0)
         ));
 
         Scanner sc = new Scanner(System.in);
@@ -27,33 +27,33 @@ public class Main {
 
             switch (choice) {
                 case 1:
-                    System.out.println("\n📦 Orders:");
+                    System.out.println("\n Orders:");
                     for (Order o : orders) System.out.println(o);
                     break;
 
                 case 2:
                     bubbleSort(orders);
-                    System.out.println("✅ Orders sorted by Bubble Sort.");
+                    System.out.println("Orders sorted by Bubble Sort.");
                     break;
 
                 case 3:
                     quickSort(orders, 0, orders.size() - 1);
-                    System.out.println("✅ Orders sorted by Quick Sort.");
+                    System.out.println("Orders sorted by Quick Sort.");
                     break;
 
                 case 4:
-                    System.out.println("👋 Exiting...");
+                    System.out.println("Exiting...");
                     break;
 
                 default:
-                    System.out.println("⚠️ Invalid choice. Try again.");
+                    System.out.println("Invalid choice. Try again.");
             }
         } while (choice != 4);
 
         sc.close();
     }
 
-    // 🔁 Bubble Sort (Descending)
+    
     public static void bubbleSort(List<Order> orders) {
         int n = orders.size();
         for (int i = 0; i < n - 1; i++) {
@@ -65,7 +65,7 @@ public class Main {
         }
     }
 
-    // ⚡ Quick Sort (Descending)
+
     public static void quickSort(List<Order> orders, int low, int high) {
         if (low < high) {
             int pi = partition(orders, low, high);
